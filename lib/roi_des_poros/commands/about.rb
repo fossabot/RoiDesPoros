@@ -1,7 +1,7 @@
 module RoiDesPoros
-  
+
   module Commands
-    
+
     # Prints most useful information about the bot.
     module About
       extend Discordrb::Commands::CommandContainer
@@ -15,8 +15,8 @@ module RoiDesPoros
             url: 'https://triinoxys.fr'
           }
           e.description = "Je suis le **Roi des Poros**. Mon but est d'animer le serveur et de répondre à *tous* vos besoins!"
-          
-          e.add_field name: '__Infos:__', value: "**Développeur:** <@131218864234168321>  \n**Propriétaire de l'instance:** <@#{CONFIG.owner_id}>  \n**GitHub:** github.com/TriiNoxYs/RoiDesPoros(https://github.com/TriiNoxYs/RoiDesPoros)  \n**Discord:** [discord.gg/sKYmk9c](https://discord.gg/sKYmk9c)  \n**Mail:** contact@triinoxys.fr", inline: true
+
+          e.add_field name: '__Infos:__', value: "**Développeur:** <@131218864234168321>  \n**Propriétaire de l'instance:** <@#{CONFIG.owner_id}>  \n**GitHub:** [github.com/TriiNoxYs/RoiDesPoros](https://github.com/TriiNoxYs/RoiDesPoros)  \n**Discord:** [discord.gg/sKYmk9c](https://discord.gg/sKYmk9c)  \n**Mail:** contact@triinoxys.fr", inline: true
           e.add_field name: '__Stats:__', value: "Soon!", inline: true
 
           e.footer = { text: "Roi des Poros v#{VERSION}" }
