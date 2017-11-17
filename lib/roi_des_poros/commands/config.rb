@@ -17,6 +17,8 @@ module RoiDesPoros
           e.add_field name: 'RAM:', value: "16Go", inline: true
           e.add_field name: 'Alimentation:', value: "Corsair VS450", inline: true
           e.add_field name: 'Ventirad:', value: "LEPA Neollusion", inline: true
+          e.add_field name: 'SSD:', value: "Samsung EVO 250Go", inline: true
+          e.add_field name: 'HDD:', value: "Seagate Barracuda 1To", inline: true
           e.add_field name: 'Boitier:', value: "Spirit of Gamer ROGUE IV", inline: true
         end
         
