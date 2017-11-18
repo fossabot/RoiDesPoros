@@ -25,7 +25,8 @@ module RoiDesPoros
     
     @commands = [
       About,
-      Config
+      Config,
+      Jeu
     ]
 
     def self.include!
