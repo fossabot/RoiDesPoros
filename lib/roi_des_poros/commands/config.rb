@@ -32,6 +32,8 @@ module RoiDesPoros
           e.add_field name: 'Souris:', value: "Logitech G500s", inline: true
           e.add_field name: 'Webcam:', value: "Logitech C-922 HD Pro", inline: true
           e.add_field name: 'Logiciel de stream:', value: "XSplit Broadcaster", inline: true
+          
+          e.footer = { text: "Roi des Poros v#{VERSION} by TriiNoxYs" }
         end
       end
     end
