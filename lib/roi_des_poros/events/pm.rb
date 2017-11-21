@@ -1,22 +1,19 @@
 module RoiDesPoros
   
   module Events
-    # Sends messages to every channel bot is connected to, when receives a message from owner.
-    module MassMessage
+    
+    module SpeakAsBot
       extend Discordrb::EventContainer
       
-=begin
       pm(from: CONFIG.owner_id) do |event|
         text = event.message.content
-        event.bot.servers.values.each do |server|
-          bot_profile = event.bot.profile.on(server)
-          server.text_channels.each do |channel|
-            next unless bot_profile.permission?(:send_messages, channel)
-            channel.send_message("**Mass message**: #{text}")
-          end
-        end
+        server = event.bot.servers.values[0]
+        bot_profile = event.bot.profile.on(server)
+        channel = server.channels[0]
+        
+        channel.send_message(text) if bot_profile.permission?(:send_messages, channel)
       end
-=end
+        
     end
   end
 end

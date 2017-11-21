@@ -10,7 +10,8 @@ module RoiDesPoros
       AntiJul,
       JoinMessage,
       LeaveMessage,
-      BanMessage
+      BanMessage,
+      SpeakAsBot
 ]
 
     def self.include!
