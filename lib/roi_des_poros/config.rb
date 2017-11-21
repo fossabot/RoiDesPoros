@@ -36,6 +36,10 @@ module RoiDesPoros
       puts 'Code de permissions (default = 66321471)'
       @config[:permissions_code] = gets.chomp
       @config[:permissions_code] = 66321471 if @config[:permissions_code].empty?
+      
+      puts 'ID du salon pour les messages de bienvenue'
+      @config[:welcome_channel] = gets.chomp
+      
       save
     end
 
