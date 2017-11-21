@@ -6,8 +6,7 @@ module RoiDesPoros
       extend Discordrb::EventContainer
       mention do |event|
 
-        event.respond("Roi des Poros v#{VERSION} à votre service!")
-        event.respond("`#{CONFIG.prefix}help` pour la liste des commandes :desktop:")
+        event.respond("Roi des Poros v#{VERSION} à votre service!  \n `#{CONFIG.prefix}help` pour la liste des commandes :desktop:")
       end
     end
   end
