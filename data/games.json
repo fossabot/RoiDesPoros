@@ -1,0 +1,92 @@
+{
+  "Fortnite": {
+    "role_id": "373807478900523013",
+    "names": [
+      "fortnite"
+    ]
+  },
+  "Minecraft": {
+    "role_id": "373811887562948609",
+    "names": [
+      "minecraft", "mc"
+    ]
+  },
+  "H1Z1": {
+    "role_id": "399523928445419520",
+    "names": [
+      "h1z1"
+    ]
+  },
+  "LeagueOfLegends": {
+    "role_id": "373807585415135253",
+    "names": [
+      "leagueoflegends", "lol"
+    ]
+  },
+  "CSGO": {
+    "role_id": "373811989614690315",
+    "names": [
+      "csgo", "cs"
+    ]
+  },
+  "PAYDAY2": {
+    "role_id": "373814297626673152",
+    "names": [
+      "payday2"
+    ]
+  },
+  "Dofus": {
+    "role_id": "373819199388385281",
+    "names": [
+      "dofus"
+    ]
+  },
+  "RocketLeague": {
+    "role_id": "373819423665946624",
+    "names": [
+      "rocketleague"
+    ]
+  },
+  "Paladins": {
+    "role_id": "373820014178074626",
+    "names": [
+      "paladins"
+    ]
+  },
+  "FIFA": {
+    "role_id": "373942275572498447",
+    "names": [
+      "fifa"
+    ]
+  },
+  "CallOfDuty": {
+    "role_id": "381454112081838082",
+    "names": [
+      "callofduty", "cod"
+    ]
+  },
+  "Battlerite": {
+    "role_id": "398186530050539520",
+    "names": [
+      "battlerite"
+    ]
+  },
+  "GTA": {
+    "role_id": "399286207034556417",
+    "names": [
+      "gta"
+    ]
+  },
+  "RainbowSix": {
+    "role_id": "399323409764581386",
+    "names": [
+      "rainbowsix", "r6"
+    ]
+  },
+  "Trove": {
+    "role_id": "399323076510220290",
+    "names": [
+      "trove"
+    ]
+  }
+}
