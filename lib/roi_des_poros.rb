@@ -2,6 +2,7 @@ require 'uri'
 require 'yaml'
 require 'fileutils'
 require 'open-uri'
+require 'json'
 
 # Gems.
 require 'bundler/setup'
@@ -79,9 +80,13 @@ module RoiDesPoros
                                             advanced_functionality: false,
                                             fancy_log: true)
 
-  # See lib/commands.rb and lib/events.rb.
+
+  # Set roles/users Permissions, define Commands and Events. 
+  # See lib/roi_des_poros/commands.rb, lib/roi_des_poros/events.rb and lib/roi_des_poros/permissions.rb
+  Permissions.set!
   Commands.include!
   Events.include!
+  
 
   at_exit do
     # LOGGER.info 'Arret du bot...'
