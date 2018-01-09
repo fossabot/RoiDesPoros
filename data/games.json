@@ -8,7 +8,8 @@
   "Minecraft": {
     "role_id": "373811887562948609",
     "names": [
-      "minecraft", "mc"
+      "minecraft",
+      "mc"
     ]
   },
   "H1Z1": {
@@ -20,13 +21,15 @@
   "LeagueOfLegends": {
     "role_id": "373807585415135253",
     "names": [
-      "leagueoflegends", "lol"
+      "leagueoflegends",
+      "lol"
     ]
   },
   "CSGO": {
     "role_id": "373811989614690315",
     "names": [
-      "csgo", "cs"
+      "csgo",
+      "cs"
     ]
   },
   "PAYDAY2": {
@@ -62,7 +65,8 @@
   "CallOfDuty": {
     "role_id": "381454112081838082",
     "names": [
-      "callofduty", "cod"
+      "callofduty",
+      "cod"
     ]
   },
   "Battlerite": {
@@ -80,13 +84,20 @@
   "RainbowSix": {
     "role_id": "399323409764581386",
     "names": [
-      "rainbowsix", "r6"
+      "rainbowsix",
+      "r6"
     ]
   },
   "Trove": {
     "role_id": "399323076510220290",
     "names": [
       "trove"
+    ]
+  },
+  "Hearthstone": {
+    "role_id": "400004378758479893",
+    "names": [
+      "hearthstone"
     ]
   }
 }
