@@ -27,7 +27,8 @@ module RoiDesPoros
       About,
       Config,
       Jeu,
-      Purge
+      Purge,
+      Poll
     ]
 
     def self.include!
