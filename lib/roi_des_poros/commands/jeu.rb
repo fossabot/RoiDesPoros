@@ -16,6 +16,7 @@ module RoiDesPoros
       command(:jeu, description: 'Système de jeux pour trouver des potos avec qui jouer.', usage: '!jeu <nom du jeu>') do |event, *args|
 	file = File.read('/opt/ruby/discord/apps/RoiDesPoros/data/games.json')
         games = JSON.parse(file)
+	user = event.user
         
         # List
 	if args.size == 0
@@ -30,31 +31,38 @@ module RoiDesPoros
 	else
 	  # Create
 	  if args[0].downcase == "create"
-	    if event.user.id != 131218864234168321 then event.respond("Tu ne peux pas faire ça!") && return end
+	    if user.id != 131218864234168321 then event.respond("Tu ne peux pas faire ça!") && return end
 	    games[args[1]] = {role_id: args[2], names: [args[1].downcase]}
 	    File.open("/opt/ruby/discord/apps/RoiDesPoros/data/games.json", "w") { |f| f.write(JSON.pretty_generate(games)) }
 	    event.respond("Le jeu a bien été créé! <:porocoolguy:371719520559300608>")
 
 	  # Delete	  
 	  elsif args[0].downcase == "delete"
-            if event.user.id != 131218864234168321 then event.respond("Tu ne peux pas faire ça!") && return end	  
+            if user.id != 131218864234168321 then event.respond("Tu ne peux pas faire ça!") && return end	  
 	    games.delete(args[1])
 	    File.open("/opt/ruby/discord/apps/RoiDesPoros/data/games.json", "w") { |f| f.write(JSON.pretty_generate(games)) }
 	    event.respond("Le jeu a bien été supprimé! <:porosad:371719545762742304>")	  	
 
 	  # Join
 	  else
-            success = false
+	    success = false
             games.each do |game|
 	      if game[1]["names"].include? args[0].downcase
-                event.user.add_role(game[1]["role_id"])
-                success = true
-                break
+		if user.role? game[1]["role_id"]
+		  user.remove_role(game[1]["role_id"])
+		  event.respond("Et voila, plus jamais de @$%#!?! de notifs pour ce groupe! <:fuckteemo:374627276429721611>")
+                  success = true
+		  break
+		else
+		  user.add_role(game[1]["role_id"])
+		  event.respond("Hopla, je t'ai ajouté à ce groupe! <:ouichef:374627649370324992>")
+	  	  success = true                  
+		  break
+		end
               end
             end
 
-            if success then event.respond("Oui, Chef! Voila, Chef! <:ouichef:374627649370324992>")
-            else event.respond("Euh Chef... Je ne trouve pas votre jeu... <:porosad:371719545762742304>")
+            if !success then event.respond("Euh Chef... Je ne trouve pas votre jeu... <:porosad:371719545762742304>")
             end
 	  end  
 	end
