@@ -5,7 +5,8 @@ module RoiDesPoros
     module Poll
       extend Discordrb::Commands::CommandContainer
 
-      command(:poll, description: 'Outils de sondages.', usage: '!poll "Question" "réponse 1" "réponse 2" ["autres réponses.."]', min_args: 3) do |event, *args|
+      command(:poll, description: 'Outils de sondages.', usage: '!poll Question | réponse 1 | réponse 2 | autres réponses..', min_args: 3) do |event, *args|
+	event.message.delete
 
 	args = args.join(' ').split('|')
 	question = args[0]
@@ -14,7 +15,7 @@ module RoiDesPoros
         message = event.channel.send_embed do |e|
           e.color = 5800090
 
-	  desc = "**#{question}**\n\n"
+	  desc = "🗳️ **#{question}**\n\n"
           responses.each_with_index do |response, index|
             desc << "#{num_to_emoji(index+1)} #{response}\n"
           end
@@ -31,6 +32,25 @@ module RoiDesPoros
 	
 	return
       end
+
+      
+      command(:pollyn, description: 'Outils de sondages Oui/Non.', usage: '!poll Question', min_args: 1) do |event, *args|
+        event.message.delete
+
+        question = args.join(' ')
+
+        message = event.channel.send_embed do |e|
+          e.color = 5800090
+          e.description = "🗳️ @everyone **#{question}**"
+        end
+
+	message.react("👍")
+	sleep(0.5)
+	message.react("👎")
+
+        return
+      end
+
 
     end
   end
