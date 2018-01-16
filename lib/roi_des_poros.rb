@@ -3,6 +3,7 @@ require 'yaml'
 require 'fileutils'
 require 'open-uri'
 require 'json'
+require 'twemoji'
 
 # Gems.
 require 'bundler/setup'
@@ -86,7 +87,6 @@ module RoiDesPoros
   Permissions.set!
   Commands.include!
   Events.include!
-  
 
   at_exit do
     # LOGGER.info 'Arret du bot...'

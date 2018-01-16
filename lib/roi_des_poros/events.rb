@@ -11,7 +11,11 @@ module RoiDesPoros
       JoinMessage,
       LeaveMessage,
       BanMessage,
-      SpeakAsBot
+      SpeakAsBot,
+      BotReady,
+      JoinPM,
+      AutoRole
+#      Levels
 ]
 
     def self.include!

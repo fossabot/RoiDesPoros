@@ -28,7 +28,9 @@ module RoiDesPoros
       Config,
       Jeu,
       Purge,
-      Poll
+      Poll,
+      Avatar,
+      Emoji
     ]
 
     def self.include!

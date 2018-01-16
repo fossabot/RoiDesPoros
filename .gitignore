@@ -8,3 +8,9 @@ data/config.yml
 
 # Logs
 logs/*.log
+
+# Some data files
+data/emojis/*
+data/avatars/*
+!data/emojis/.gitkeep
+!data/avatars/.gitkeep
