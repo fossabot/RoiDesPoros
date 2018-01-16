@@ -20,7 +20,7 @@ module RoiDesPoros
         
         # List
 	if args.size == 0
-	  response = "Voici la liste des jeux, Chef! <:ouichef:374627649370324992>\n```"
+	  response = "Voici la liste des jeux! 🕹️🎮️\n```"
 	  games.each do |game| 
 	    response << " - #{game[0]}"
 	    if game[1]["names"].size > 1 then response << " (alias: #{game[1]["names"].drop(1).join(', ')})" end
@@ -45,9 +45,10 @@ module RoiDesPoros
 
 	  # Join
 	  else
-	    success = false
+            asked_game = args.join('').downcase
+            success = false
             games.each do |game|
-	      if game[1]["names"].include? args[0].downcase
+	      if game[1]["names"].include? asked_game
 		if user.role? game[1]["role_id"]
 		  user.remove_role(game[1]["role_id"])
 		  event.respond("Et voila, plus jamais de @$%#!?! de notifs pour ce groupe! <:fuckteemo:374627276429721611>")
@@ -62,7 +63,7 @@ module RoiDesPoros
               end
             end
 
-            if !success then event.respond("Euh Chef... Je ne trouve pas votre jeu... <:porosad:371719545762742304>")
+            if !success then event.respond("Euh... Je ne trouve pas ton jeu... <:porosad:371719545762742304>")
             end
 	  end  
 	end

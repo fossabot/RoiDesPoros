@@ -99,5 +99,11 @@
     "names": [
       "hearthstone"
     ]
+  },
+  "Overwatch": {
+    "role_id": "401748571059126274",
+    "names": [
+      "overwatch"
+    ]
   }
 }

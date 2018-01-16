@@ -3,14 +3,18 @@
 /spec/reports/
 /tmp/
 
+
 # Config
 data/config.yml
+
 
 # Logs
 logs/*.log
 
-# Some data files
+
+# Data files
 data/emojis/*
-data/avatars/*
 !data/emojis/.gitkeep
+
+data/avatars/*
 !data/avatars/.gitkeep
