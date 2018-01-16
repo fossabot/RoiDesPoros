@@ -13,6 +13,7 @@ module RoiDesPoros
       command(:p, description: 'Alias pour la commande purge.', min_args: 1, max_args: 1, required_permissions: [:manage_messages]) do |event, n|
           if n.to_i.to_s == n then event.channel.prune(n.to_i + 1)
           else event.respond(":x: Merci d'entrer un nombre de messages à supprimer.") end
+	  return
       end
     end
   end
