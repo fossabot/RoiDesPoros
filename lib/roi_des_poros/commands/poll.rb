@@ -12,12 +12,18 @@ module RoiDesPoros
 	question = args[0]
 	responses = args[1..args.size-1]
 
+	if responses.size > 9
+	  event.respond('Merci de ne pas entrer plus de 9 réponses.')
+	  return
+	end
+
         message = event.channel.send_embed do |e|
           e.color = 5800090
 
 	  desc = "🗳️ **#{question}**\n\n"
           responses.each_with_index do |response, index|
-            desc << "#{num_to_emoji(index+1)} #{response}\n"
+            index = index + 1 unless responses.size >= 9
+            desc << "#{num_to_emoji(index)} #{response}\n"
           end
 
           e.description = desc
@@ -26,8 +32,9 @@ module RoiDesPoros
         end
 
 	responses.each_with_index do |r, index|
-	  message.react(num_to_emoji(index+1))
-	  sleep(0.5)
+          index = index + 1 unless responses.size >= 9
+	  message.react(num_to_emoji(index))
+	  sleep(0.3)
 	end
 	
 	return
@@ -35,17 +42,17 @@ module RoiDesPoros
 
       
       command(:pollyn, description: 'Outils de sondages Oui/Non.', usage: '!poll Question', min_args: 1) do |event, *args|
-        event.message.delete
+	event.message.delete
 
         question = args.join(' ')
 
         message = event.channel.send_embed do |e|
           e.color = 5800090
-          e.description = "🗳️ @everyone **#{question}**"
+          e.description = "🗳️ **#{question}**"
         end
 
 	message.react("👍")
-	sleep(0.5)
+	sleep(0.3)
 	message.react("👎")
 
         return
@@ -79,7 +86,5 @@ def num_to_emoji(index)
       "8⃣"
     when 9
       "9⃣"
-    else
-      "ERROR"
   end
 end
