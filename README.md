@@ -5,3 +5,7 @@ RoiDesPoros is developed and maintained by [TriiNoxYs](http://triinoxys.fr/).
 
 ## License
 See the [LICENSE](LICENSE.md) file for license rights and limitations (GPLv3).
+
+# ZelEnjoy Discord Server
+
+[![](https://discordapp.com/api/guilds/371046774758178816/embed.png?style=banner2)](https://discord.gg/DQXUE5k)
