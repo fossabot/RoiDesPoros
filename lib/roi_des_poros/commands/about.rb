@@ -10,7 +10,7 @@ module RoiDesPoros
         event.channel.send_embed do |e|
           e.color = 5800090
           e.author = {
-            icon_url: 'https://cdn.discordapp.com/avatars/372776478192041984/94352fbe5d2ea24b5e69a4ea6d6bf4fe.png',
+            icon_url: BOT.profile.avatar_url,
             name: 'Roi des Poros',
             url: 'https://triinoxys.fr'
           }
