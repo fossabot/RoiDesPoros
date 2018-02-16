@@ -30,7 +30,8 @@ module RoiDesPoros
       Purge,
       Poll,
       Avatar,
-      Emoji
+      Emoji,
+      Bob
     ]
 
     def self.include!
