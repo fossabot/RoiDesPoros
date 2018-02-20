@@ -31,7 +31,8 @@ module RoiDesPoros
       Poll,
       Avatar,
       Emoji,
-      Bob
+      Bob,
+      Site
     ]
 
     def self.include!
