@@ -5,7 +5,7 @@ module RoiDesPoros
     # Prints most useful information about the bot.
     module Config
       extend Discordrb::Commands::CommandContainer
-      command(:config, description: 'Affiche les composants du PC d\'Enjoy.') do |event|
+      command([:config, :setup], description: 'Affiche les composants du PC d\'Enjoy.') do |event|
 
         event.channel.send_embed do |e|
           e.color = 5800090
