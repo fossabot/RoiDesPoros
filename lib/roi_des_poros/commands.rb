@@ -5,24 +5,6 @@ module RoiDesPoros
     # Require files from directory
     Dir["#{File.dirname(__FILE__)}/commands/*.rb"].each { |file| require file }
 
-=begin
-    @commands = [
-      Announce,
-      Delete,
-      Invite,
-      Ping,
-      About,
-      Avatar,
-      Toggle,
-      Set,
-      Default,
-      Settings,
-      Ignore,
-      Join,
-      Leave,
-    ]
-=end
-    
     @commands = [
       About,
       Config,
@@ -32,7 +14,8 @@ module RoiDesPoros
       Avatar,
       Emoji,
       Bob,
-      Site
+      Site,
+      Idee
     ]
 
     def self.include!
