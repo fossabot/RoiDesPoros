@@ -7,7 +7,7 @@ module RoiDesPoros
 
     @commands = [
       About,
-      Config,
+      Setup,
       Jeu,
       Purge,
       Poll,
