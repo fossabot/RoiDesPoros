@@ -31,11 +31,14 @@ module RoiDesPoros
           #e.footer = { text: "Votez avec les réactions en dessous!" }
         end
 
-	responses.each_with_index do |r, index|
-          index = index + 1 unless responses.size >= 9
-	  message.react(num_to_emoji(index))
-	  sleep(0.3)
-	end
+	Thread.new {
+	  Thread.current[:discordrb_name] = 'react-delay'
+	  responses.each_with_index do |r, index|
+            index = index + 1 unless responses.size >= 9
+	    message.react(num_to_emoji(index))
+	    sleep(0.3)
+	  end
+	}.join
 	
 	return
       end
@@ -51,9 +54,12 @@ module RoiDesPoros
           e.description = "🗳️ **#{question}**"
         end
 
-	message.react("👍")
-	sleep(0.3)
-	message.react("👎")
+	Thread.new {
+	  Thread.current[:discordrb_name] = 'react-delay'
+	  p message.react("👍")
+	  sleep(0.3)
+	  message.react("👎")
+	}.join
 
         return
       end

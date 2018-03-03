@@ -24,12 +24,16 @@ module RoiDesPoros
 
 	response = event.respond("Votre idée a bien été proposée! <#418414010971586563>")
 
-	message.react("👍")
-	sleep(0.3)
-	message.react("👎")
+	Thread.new {
+	  Thread.current[:discordrb_name] = 'react-delay'
+	  message.react("👍")
+	  sleep(0.3)
+	  message.react("👎")
+	}.join
 
-	delayed_thread = Thread.new {
-	  sleep 5
+	Thread.new {
+	  Thread.current[:discordrb_name] = 'delete-delay'
+	  sleep 3.5
 	  response.delete 
 	}.join
 
