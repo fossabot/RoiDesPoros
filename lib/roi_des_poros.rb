@@ -79,7 +79,11 @@ module RoiDesPoros
                                             application_id: CONFIG.client_id,
                                             prefix: CONFIG.prefix,
                                             advanced_functionality: false,
-                                            fancy_log: true)
+                                            fancy_log: true,
+					    command_doesnt_exist_message: "Cette commande n'existe pas <:porosad:371719545762742304> \nTape `#{CONFIG.prefix}help` pour un peu d'aide! <:porotongue:409338015769559040>",
+					    no_permission_message: "/!\ <@131218864234168321> à la rescousse, je suis censé avoir cette perm! <:poroangry:409338015568363521>",
+					    help_command: [:help, :aide]
+       )
 
 
   # Set roles/users Permissions, define Commands and Events. 
