@@ -16,7 +16,7 @@ module RoiDesPoros
           }
           e.description = "Je suis le **Roi des Poros**. Mon but est d'animer le serveur et de répondre à *tous* vos besoins!"
 
-          e.add_field name: '__Infos:__', value: "**Développeur:** <@131218864234168321>  \n**Propriétaire de l'instance:** <@#{CONFIG.owner_id}>  \n**GitHub:** [github.com/triinoxys/RoiDesPoros](https://github.com/triinoxys/RoiDesPoros)  \n**Discord:** [discord.gg/sKYmk9c](https://discord.gg/sKYmk9c)  \n**Mail:** contact@triinoxys.fr", inline: true
+          e.add_field name: '__Infos:__', value: "**Développeur:** <@131218864234168321>  \n**GitHub:** [github.com/triinoxys/RoiDesPoros](https://github.com/triinoxys/RoiDesPoros)  \n**Discord:** [discord.gg/sKYmk9c](https://discord.gg/sKYmk9c)  \n**Mail:** contact@triinoxys.fr", inline: true
           # e.add_field name: '__Colonne 2:__', value: "blblbl", inline: true
 
           e.footer = { text: "Roi des Poros v#{VERSION} by triinoxys" }
