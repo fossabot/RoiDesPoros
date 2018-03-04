@@ -15,7 +15,8 @@ module RoiDesPoros
       Emoji,
       Bob,
       Site,
-      Idee
+      Idee,
+      Baron
     ]
 
     def self.include!
