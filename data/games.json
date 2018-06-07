@@ -112,5 +112,23 @@
       "buisnesstour",
       "buisness tour"
     ]
+  },
+  "Battlefield": {
+    "role_id": "425049609849798657",
+    "names": [
+      "battlefield"
+    ]
+  },
+  "Adibou": {
+    "role_id": "425726005546844171",
+    "names": [
+      "adibou"
+    ]
+  },
+  "Deceit": {
+    "role_id": "450756742763249664",
+    "names": [
+      "deceit"
+    ]
   }
 }
