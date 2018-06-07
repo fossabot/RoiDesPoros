@@ -17,7 +17,8 @@ module RoiDesPoros
       Site,
       Idee,
       Baron,
-      FortniteStats
+      FortniteStats,
+      Ah
     ]
 
     def self.include!
